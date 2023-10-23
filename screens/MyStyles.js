@@ -15,29 +15,23 @@ export const styles = StyleSheet.create({
     width: width - 20,
     height: width - 20,
     margin: 10,
-    borderWidth: 2, // Border width
-    borderColor: "black", // Border color
   },
   playContainer: {
     width: "100%",
     height: "40%",
-    display: "flex",
-    borderWidth: 2, // Border width
-    borderColor: "black", // Border color
+    flexDirection: "row",
   },
   homeContainer: {
     width: "100%",
     height: "20%",
-    display: "flex",
-    borderWidth: 2, // Border width
-    borderColor: "black", // Border color
+    flexDirection: "row",
   },
   startArea: {
     width: "40%",
     height: "100%",
     alignItems: "center",
     justifyContent: "center",
-    display: "flex",
+    flex: 1,
   },
   verticalPath: {
     width: "20%",

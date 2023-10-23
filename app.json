@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "ludoReactNative",
-    "slug": "ludoReactNative",
+    "name": "Advance Ludo",
+    "slug": "ludogame",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -11,7 +11,9 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -23,6 +25,17 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3424a868-1591-4fab-9fc4-150765cfdee0"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/3424a868-1591-4fab-9fc4-150765cfdee0"
     }
   }
 }
