@@ -36,10 +36,14 @@ export const styles = StyleSheet.create({
   verticalPath: {
     width: "20%",
     height: "100%",
+    flexDirection: "row",
+    flexWrap: "wrap",
   },
   horizontalPath: {
     width: "40%",
     height: "100%",
+    flexDirection: "row",
+    flexWrap: "wrap",
   },
   homePath: {
     width: "20%",
@@ -63,6 +67,8 @@ export const styles = StyleSheet.create({
   subStartArea: {
     width: "70%",
     height: "70%",
+    flexDirection: "row",
+    flexWrap: "wrap",
   },
   subStartArea_View: {
     width: "35%",
@@ -88,7 +94,7 @@ export const styles = StyleSheet.create({
   },
   subHorizontalPath: {
     height: "33.33%",
-    width: "16.667%",
+    width: "16.66%",
     borderWidth: 1,
     borderColor: "#000",
   },
