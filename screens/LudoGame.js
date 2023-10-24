@@ -1,12 +1,14 @@
 import React from "react";
-import { View, Text } from "react-native";
-
 import { styles } from "./MyStyles";
+import { View, Text } from "react-native";
+import Icon from "react-native-vector-icons/FontAwesome";
+
+import appDimensions from "../constants/dimension";
+const { cellWidth } = appDimensions;
 
 export default function LudoGame() {
   return (
     <View style={styles.wrapper}>
-      <Text>Ludo</Text>
       <View style={styles.container}>
         {/* Container1 */}
         <View style={styles.playContainer}>
@@ -26,9 +28,15 @@ export default function LudoGame() {
             {/* 2nd line */}
             <View style={styles.subVerticalPath}></View>
             <View style={[styles.subVerticalPath, styles.yellow]}></View>
-            <View style={[styles.subVerticalPath, styles.yellow]}></View>
+            <View
+              style={[styles.subVerticalPath, styles.yellow, styles.centered]}
+            >
+              <Icon name="circle" size={cellWidth} color="#fff" />
+            </View>
             {/* 3rd line */}
-            <View style={styles.subVerticalPath}></View>
+            <View style={[styles.subVerticalPath, styles.centered]}>
+              <Icon name="star" size={cellWidth} color="#f6c700" />
+            </View>
             <View style={[styles.subVerticalPath, styles.yellow]}></View>
             <View style={styles.subVerticalPath}></View>
             {/* 4th line */}
@@ -58,7 +66,11 @@ export default function LudoGame() {
           <View style={styles.horizontalPath}>
             {/* 1st line */}
             <View style={styles.subHorizontalPath}></View>
-            <View style={[styles.subHorizontalPath, styles.green]}></View>
+            <View
+              style={[styles.subHorizontalPath, styles.green, styles.centered]}
+            >
+              <Icon name="circle" size={cellWidth} color="#fff" />
+            </View>
             <View style={styles.subHorizontalPath}></View>
             <View style={styles.subHorizontalPath}></View>
             <View style={styles.subHorizontalPath}></View>
@@ -73,14 +85,24 @@ export default function LudoGame() {
             {/* 3rd line */}
             <View style={styles.subHorizontalPath}></View>
             <View style={styles.subHorizontalPath}></View>
-            <View style={styles.subHorizontalPath}></View>
+            <View style={[styles.subHorizontalPath, styles.centered]}>
+              <Icon name="star" size={cellWidth} color="#84c21f" />
+            </View>
             <View style={styles.subHorizontalPath}></View>
             <View style={styles.subHorizontalPath}></View>
             <View style={styles.subHorizontalPath}></View>
           </View>
           <View style={styles.homePath}>
             <View style={styles.triangleContainer}>
-              {/* <View style={styles.triangleRight}></View> */}
+              <View style={styles.triangleRight}></View>
+              <View style={styles.triangleUp}></View>
+              <View style={styles.triangleLeft}></View>
+              <View style={styles.triangleDown}></View>
+              <View style={styles.circle}>
+                <View style={styles.text}>
+                  <Text style={styles.textStyle}>Home</Text>
+                </View>
+              </View>
             </View>
           </View>
           <View style={styles.horizontalPath}>
@@ -88,7 +110,9 @@ export default function LudoGame() {
             <View style={styles.subHorizontalPath}></View>
             <View style={styles.subHorizontalPath}></View>
             <View style={styles.subHorizontalPath}></View>
-            <View style={styles.subHorizontalPath}></View>
+            <View style={[styles.subHorizontalPath, styles.centered]}>
+              <Icon name="star" size={cellWidth} color="#0092dc" />
+            </View>
             <View style={styles.subHorizontalPath}></View>
             <View style={styles.subHorizontalPath}></View>
             {/* 2nd line */}
@@ -103,7 +127,11 @@ export default function LudoGame() {
             <View style={styles.subHorizontalPath}></View>
             <View style={styles.subHorizontalPath}></View>
             <View style={styles.subHorizontalPath}></View>
-            <View style={[styles.subHorizontalPath, styles.blue]}></View>
+            <View
+              style={[styles.subHorizontalPath, styles.blue, styles.centered]}
+            >
+              <Icon name="circle" size={cellWidth} color="#fff" />
+            </View>
             <View style={styles.subHorizontalPath}></View>
           </View>
         </View>
@@ -133,9 +161,13 @@ export default function LudoGame() {
             {/* 4th line */}
             <View style={styles.subVerticalPath}></View>
             <View style={[styles.subVerticalPath, styles.red]}></View>
-            <View style={styles.subVerticalPath}></View>
+            <View style={[styles.subVerticalPath, styles.centered]}>
+              <Icon name="star" size={cellWidth} color="#dc2418" />
+            </View>
             {/* 5th line */}
-            <View style={styles.subVerticalPath}></View>
+            <View style={[styles.subVerticalPath, styles.red, styles.centered]}>
+              <Icon name="circle" size={cellWidth} color="#fff" />
+            </View>
             <View style={[styles.subVerticalPath, styles.red]}></View>
             <View style={styles.subVerticalPath}></View>
             {/* 6th line */}

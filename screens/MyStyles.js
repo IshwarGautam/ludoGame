@@ -1,6 +1,7 @@
-import { StyleSheet, StatusBar, Platform, Dimensions } from "react-native";
+import { StyleSheet, StatusBar, Platform } from "react-native";
 
-const { width } = Dimensions.get("window");
+import appDimensions from "../constants/dimension";
+const { containerWidth, bwidth } = appDimensions;
 
 export const styles = StyleSheet.create({
   wrapper: {
@@ -12,8 +13,8 @@ export const styles = StyleSheet.create({
     marginTop: Platform.OS === "android" ? StatusBar.currentHeight + 10 : 0,
   },
   container: {
-    width: width - 20,
-    height: width - 20,
+    width: containerWidth,
+    height: containerWidth,
     margin: 10,
   },
   playContainer: {
@@ -98,46 +99,43 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#000",
   },
-  icon: {
-    margin: 3,
-    color: "#fff",
-  },
-  triangleIcon: {
-    margin: 2,
+  centered: {
+    justifyContent: "center",
+    alignItems: "center",
   },
   triangleContainer: {
     width: "100%",
     height: "100%",
     position: "relative",
+    justifyContent: "center",
+    alignItems: "center",
   },
   triangleRight: {
     width: 0,
     height: 0,
     backgroundColor: "transparent",
     borderStyle: "solid",
-    borderLeftWidth: 55,
-    borderTopWidth: 55,
-    borderBottomWidth: 55,
+    borderLeftWidth: bwidth,
+    borderTopWidth: bwidth,
+    borderBottomWidth: bwidth,
     borderLeftColor: "#84c21f",
     borderTopColor: "transparent",
     borderBottomColor: "transparent",
     position: "absolute",
     left: 0,
-    top: 5,
   },
   triangleUp: {
     width: 0,
     height: 0,
     backgroundColor: "transparent",
     borderStyle: "solid",
-    borderLeftWidth: 55,
-    borderRightWidth: 55,
-    borderBottomWidth: 55,
+    borderLeftWidth: bwidth,
+    borderRightWidth: bwidth,
+    borderBottomWidth: bwidth,
     borderLeftColor: "transparent",
     borderRightColor: "transparent",
     borderBottomColor: "#dc2418",
     position: "absolute",
-    left: 5,
     bottom: 0,
   },
   triangleLeft: {
@@ -145,14 +143,13 @@ export const styles = StyleSheet.create({
     height: 0,
     backgroundColor: "transparent",
     borderStyle: "solid",
-    borderTopWidth: 55,
-    borderRightWidth: 55,
-    borderBottomWidth: 55,
+    borderTopWidth: bwidth,
+    borderRightWidth: bwidth,
+    borderBottomWidth: bwidth,
     borderTopColor: "transparent",
     borderRightColor: "#0092dc",
     borderBottomColor: "transparent",
     position: "absolute",
-    top: 5,
     right: 0,
   },
   triangleDown: {
@@ -160,33 +157,30 @@ export const styles = StyleSheet.create({
     height: 0,
     backgroundColor: "transparent",
     borderStyle: "solid",
-    borderTopWidth: 55,
-    borderRightWidth: 55,
-    borderLeftWidth: 55,
+    borderTopWidth: bwidth,
+    borderRightWidth: bwidth,
+    borderLeftWidth: bwidth,
     borderTopColor: "#f6c700",
     borderRightColor: "transparent",
     borderLeftColor: "transparent",
     position: "absolute",
     top: 0,
-    right: 5,
   },
   circle: {
-    height: "50%",
-    width: "50%",
-    margin: 28,
+    height: "60%",
+    width: "60%",
     position: "absolute",
     backgroundColor: "#fff",
-    borderRadius: "50%",
-    zIndex: 1,
+    borderRadius: 50,
+    justifyContent: "center",
+    alignItems: "center",
   },
   text: {
-    width: "80%",
-    height: "40%",
-    marginVertical: 20,
-    marginHorizontal: 10,
-    fontSize: 8,
     color: "#000",
-    fontFamily: "Montserrat",
+  },
+  textStyle: {
+    fontSize: 14,
+    fontWeight: "bold",
   },
 
   /*
