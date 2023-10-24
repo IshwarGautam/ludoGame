@@ -1,7 +1,7 @@
 import { StyleSheet, StatusBar, Platform } from "react-native";
 
 import appDimensions from "../constants/dimension";
-const { containerWidth, bwidth } = appDimensions;
+const { containerWidth, bwidth, minScreenDimension } = appDimensions;
 
 export const styles = StyleSheet.create({
   wrapper: {
@@ -179,7 +179,7 @@ export const styles = StyleSheet.create({
     color: "#000",
   },
   textStyle: {
-    fontSize: 12,
+    fontSize: minScreenDimension * 0.03,
     fontWeight: "bold",
   },
 });
